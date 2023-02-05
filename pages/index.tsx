@@ -9,6 +9,8 @@ export default function Page() {
     return (
       <div className='container'>
         <Image
+          // priority = true will load the image before the rest of the page (lazy loading is enabled by default in Next.js)
+          priority
           src={session.user?.image || ''}
           alt='User Image'
           width={100}
