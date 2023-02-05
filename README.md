@@ -4,6 +4,17 @@ This is a starter project using [NextAuth.js](https://next-auth.js.org/) as an a
 
 > It allows to store user credentials automatically in a database during the authentication process
 
+## IMPORTANT
+
+When you are deploying your application to production, remember to set `Homepage URL` and `Authorization callback URL` in your GitHub OAuth App settings in Developer Settings on GitHub.
+
+> Do the same for other providers
+
+#### Example
+
+- Homepage URL: `https://yourdomain.com`
+- Authorization callback URL: `https://yourdomain.com/api/auth/callback/github`
+
 #### Screenshot
 
 <img src="screenshot.png" alt="screenshot" width="150">
@@ -21,7 +32,7 @@ DATABASE_URL="postgresql://postgres:Tv3iY20HkOK5p0S8@db.gydufgctgqdfhopzfypu.sup
 
 
 # * NextAuth.js
-# You will find these values in your GitHub OAuth App settings in Developer Settings on GitHub (Client ID and client secret), you will need to create a new OAuth App
+# You will find these values in your GitHub OAuth App settings in Developer Settings on GitHub (Client ID and client secret), you will need to create a new OAuth App (remember to set Homepage URL and Authorization callback URL to production URL during production)
 GITHUB_ID=YOUR_GITHUB_ID
 GITHUB_SECRET=YOUR GITHUB SECRET
 
