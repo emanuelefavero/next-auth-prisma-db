@@ -2,7 +2,7 @@
 
 This is a starter project using [NextAuth.js](https://next-auth.js.org/) as an authentication provider and [Prisma](https://www.prisma.io/) as a database ORM for PostgreSQL.
 
-> It allows to store user credentials in a database during the authentication process
+> It allows to store user credentials automatically in a database during the authentication process
 
 #### Screenshot
 
@@ -43,12 +43,16 @@ npm run dev
 
 > Note: NextAuth.js has many providers, you can find them [here](https://next-auth.js.org/configuration/providers)
 
-## Prisma Configuration for this project
+## Add Prisma to an existing NextAuth.js project
+
+- follow the instructions to [setup Prisma with NextAuth.js](https://next-auth.js.org/adapters/prisma)
+
+### Prisma Configuration for this project
 
 - run `npx prisma migrate dev` every time you change the schema
 - run `npx prisma studio` to if you want to see the database in a GUI
 
-## Prisma Configuration for new projects
+### Prisma Configuration for new projects
 
 - run `npm install prisma --save-dev`
 - run `npm install next-auth @prisma/client @next-auth/prisma-adapter`
@@ -73,7 +77,7 @@ npm run dev
 
 - run `npx prisma studio` to if you want to see the database in a GUI
 
-## Providers
+## NextAuth.js Providers
 
 - [Email](https://next-auth.js.org/configuration/providers/email)
 - [Credentials](https://next-auth.js.org/configuration/providers/credentials)
