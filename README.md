@@ -63,6 +63,10 @@ npm run dev
 
 - Paste the `URI` string in the `.env` file (DATABASE_URL)
 
+- run `npx db pull` if you already have data in your database and you want to generate the Prisma schema
+
+- add your schema in `schema.prisma`
+
 - run `npx prisma migrate dev --name init` to create the database schema (run `npx prisma migrate dev` every time you change the schema)
 
 - run `npx prisma generate` to generate the Prisma Client (run this command every time you change the schema)
