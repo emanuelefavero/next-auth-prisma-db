@@ -1,14 +1,16 @@
+// NEXTAUTH
 import NextAuth from 'next-auth'
 import GithubProvider from 'next-auth/providers/github'
+
+// PRISMA
 import { PrismaAdapter } from '@next-auth/prisma-adapter'
 import prisma from '../../../lib/prismadb'
+
+// `````````````````````````````````````````````````````
 
 export const authOptions = {
   // SECRET
   secret: process.env.NEXTAUTH_SECRET,
-
-  // PRISMA ADAPTER FOR NEXT-AUTH
-  adapter: PrismaAdapter(prisma),
 
   // Configure one or more authentication providers
   providers: [
@@ -19,7 +21,11 @@ export const authOptions = {
     // ...add more providers here
   ],
 
-  // A database is optional, but required to persist accounts in a database
+  // * PRISMA ADAPTER FOR NEXT-AUTH
+  adapter: PrismaAdapter(prisma),
+
+  // * DATABASE URL FOR NEXT-AUTH
   database: process.env.DATABASE_URL,
 }
+
 export default NextAuth(authOptions)

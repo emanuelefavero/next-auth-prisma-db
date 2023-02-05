@@ -1,3 +1,4 @@
+// * NEXTAUTH
 import { useSession, signIn, signOut } from 'next-auth/react'
 import Image from 'next/image'
 
@@ -14,6 +15,7 @@ export default function Page() {
           height={100}
         />
         Signed in as <b>{session.user?.name}</b>
+        {/* SIGN OUT */}
         <button onClick={() => signOut()} className='sign-out'>
           Sign out
         </button>
@@ -23,6 +25,7 @@ export default function Page() {
   return (
     <div className='container'>
       Not signed in
+      {/* SIGN IN */}
       <button onClick={() => signIn()}>Sign in</button>
     </div>
   )
