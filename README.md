@@ -28,7 +28,9 @@ When you are deploying your application to production, remember to set `Homepage
 ```bash
 # * Prisma
 # You can create a PostgreSQL database easly on Supabase
-DATABASE_URL="postgresql://postgres:Tv3iY20HkOK5p0S8@db.gydufgctgqdfhopzfypu.supabase.co:5432/postgres"
+DATABASE_URL="postgresql://YOUR_SUPABASE_URL/postgres"
+
+> Note: After 2023 Supabase migration, we need to copy/paste a new DATABASE_URL from Supabase. This will probably not work
 
 
 # * NextAuth.js
